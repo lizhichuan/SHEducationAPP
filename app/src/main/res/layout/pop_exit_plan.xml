@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/halftransparent"
+    android:gravity="center"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/img_close"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:layout_marginRight="25dp"
+        android:src="@mipmap/icon_pop_close" />
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="25dp"
+        android:layout_marginRight="25dp"
+        app:cardBackgroundColor="@color/white"
+        app:cardCornerRadius="13dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:minHeight="80dp"
+            android:orientation="vertical">
+
+            <com.njcool.lzccommon.view.round.CoolCircleImageView
+                android:id="@+id/img_success"
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="50dp"
+                android:src="@mipmap/icon_success" />
+
+            <TextView
+                android:id="@+id/tv_title"
+                style="@style/my_tv_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="王婷婷\n已退出计划"
+                android:textColor="@color/common_black"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/tv_tips"
+                style="@style/my_tv_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="￥20.00押金已退至您的账户\n您可重新匹配同学哦"
+                android:textColor="@color/common_hint"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_confirm"
+                style="@style/tv_btn_style"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="30dp"
+                android:text="我知道了" />
+
+        </LinearLayout>
+    </android.support.v7.widget.CardView>
+</LinearLayout>

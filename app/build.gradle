@@ -1,0 +1,93 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 25
+    buildToolsVersion "25.0.3"
+    signingConfigs {
+        release {
+            keyAlias 'chuan'
+            keyPassword '888888'
+            storeFile file('chuan_sign.jks')
+            storePassword '888888'
+        }
+        config {
+            keyAlias 'androiddebugkey'
+            keyPassword 'android'
+            storeFile file('./debug.keystore')
+            storePassword 'android'
+        }
+    }
+
+    defaultConfig {
+        applicationId "com.shaohua.sheducation"
+        minSdkVersion 15
+        targetSdkVersion 25
+        versionCode Integer.parseInt(new Date().format("yyMMddHHmm"))
+        versionName "1.0.0"
+
+        signingConfig signingConfigs.release
+        multiDexEnabled true
+        ndk {
+            abiFilters "armeabi", "armeabi-v7a", "x86", "mips"
+        }
+
+        manifestPlaceholders = [
+                GETUI_APP_ID    : "APP_ID",
+                GETUI_APP_KEY   : "APP_KEY",
+                GETUI_APP_SECRET: "APP_SECRET"
+        ]
+
+    }
+    buildTypes {
+        release {
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            debuggable false
+            signingConfig signingConfigs.release
+        }
+        debug {
+            //混淆
+            minifyEnabled false
+            //Zipalign优化
+            zipAlignEnabled true
+            // 移除无用的resource文件
+            shrinkResources false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+        }
+    }
+
+    //执行lint检查，有任何的错误或者警告提示，都会终止构建，我们可以将其关掉。
+    lintOptions {
+        abortOnError false
+    }
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+        }
+    }
+    repositories {
+        flatDir {
+            dirs 'libs'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile project(':lzccommon')
+    compile 'com.android.support.constraint:constraint-layout:1.0.2'
+    compile 'com.tencent.bugly:crashreport:latest.release'
+    compile 'com.tencent.bugly:nativecrashreport:latest.release'
+    compile 'com.android.support:support-v4:25.4.0'
+    compile 'com.getui:sdk:2.11.1.0'
+    compile 'com.tencent.mm.opensdk:wechat-sdk-android-with-mta:+'
+    compile 'com.pingxx:pingpp-core:2.1.14' // 必须添加
+    compile 'com.pingxx:pingpp-alipay:2.1.14' // 使用支付宝时添加
+    compile 'com.xiaosu:VerticalRollingTextView:1.2.0'
+}

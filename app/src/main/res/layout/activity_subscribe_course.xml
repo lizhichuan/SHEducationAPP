@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shaohua.sheducation.activity.SubscribeCourseActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_backgroud"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="1dp"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <TextView
+                style="@style/my_tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="类别" />
+
+            <com.njcool.lzccommon.view.flowlayout.CoolTagFlowLayout
+                android:id="@+id/fl_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:max_select="1"></com.njcool.lzccommon.view.flowlayout.CoolTagFlowLayout>
+        </LinearLayout>
+
+        <TextView
+            style="@style/my_tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="资料名称" />
+
+        <EditText
+            android:id="@+id/et_name"
+            style="@style/my_edit_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:hint="请输入资料名称" />
+
+        <TextView
+            android:id="@+id/tv_confirm"
+            style="@style/tv_btn_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:text="确定订阅资料" />
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

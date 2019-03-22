@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/common_backgroud"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <com.njcool.lzccommon.view.fresh.CoolSwipeRefreshLayout
+            android:id="@+id/swp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcv_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        </com.njcool.lzccommon.view.fresh.CoolSwipeRefreshLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tv_submit"
+            style="@style/tv_btn_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="20dp"
+            android:text="提交" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_wait"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            style="@style/my_tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="正在等待" />
+
+        <com.njcool.lzccommon.view.round.CoolCircleImageView
+            android:id="@+id/img_head"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/demo_plan" />
+
+        <TextView
+            android:id="@+id/tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="3dp"
+            android:text="李李李"
+            android:textColor="@color/common_color"
+            android:textSize="15sp" />
+
+        <TextView
+            style="@style/my_tv_style"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="提交里程碑" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linear_agree_deal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/tv_unagree"
+            style="@style/tv_btn_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/gv_biankuang_refuse_circle"
+            android:text="不同意" />
+
+        <TextView
+            android:id="@+id/tv_agree"
+            style="@style/tv_btn_style"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="同意" />
+    </LinearLayout>
+</LinearLayout>

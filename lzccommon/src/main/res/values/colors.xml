@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#3F51B5</color>
+    <color name="colorPrimaryDark">#303F9F</color>
+    <color name="colorAccent">#FF4081</color>
+
+
+    <color name="transparent">#00000000</color>
+    <color name="halftransparent">#80000000</color>
+    <color name="red">#ff502a</color>
+    <color name="orange">#FFA019</color>
+
+
+    <color name="black">#000000</color>
+    <color name="white">#ffffff</color>
+    <color name="line_color">#25475669</color>
+    <color name="common_color">#31C882</color>
+    <color name="common_backgroud">#f5f6fa</color>
+    <color name="common_black">#475669</color>
+    <color name="common_hint">#919AA7</color>
+    <color name="gray">#CACACA</color>
+
+
+    <color name="multiple_image_select_primaryDark">@color/common_color</color>
+    <color name="multiple_image_select_accent">@color/common_color</color>
+    <color name="multiple_image_select_albumTextBackground">#99FFFFFF</color>
+    <color name="multiple_image_select_buttonText">#FFFFFF</color>
+    <color name="multiple_image_select_divider">#B6B6B6</color>
+    <color name="multiple_image_select_imageSelectBackground">#000000</color>
+    <color name="multiple_image_select_primary">@color/common_color</color>
+    <color name="multiple_image_select_primaryLight">#C8E6C9</color>
+    <color name="multiple_image_select_primaryText">#212121</color>
+    <color name="multiple_image_select_secondaryText">#727272</color>
+    <color name="multiple_image_select_toolbarPrimaryText">#FFFFFF</color>
+
+
+    <color name="pickerview_timebtn_nor">#608bfc</color>
+    <color name="pickerview_timebtn_pre">#c2daf5</color>
+    <color name="pickerview_bg_topbar">#f5f5f5</color>
+    <color name="pickerview_topbar_title">#000000</color>
+    <color name="pickerview_wheelview_textcolor_out">#a8a8a8</color>
+    <color name="pickerview_wheelview_textcolor_center">#2a2a2a</color>
+    <color name="pickerview_wheelview_textcolor_divider">#d5d5d5</color>
+    <!--覆盖颜色-->
+    <color name="bgColor_overlay">#60000000</color>
+
+    <color name="bg_blue">#ff0694f5</color>
+
+    <color name="shouye_renmen_tv">#2b2b2b</color>
+
+    <color name="lv_divider">#dad9e2</color>
+
+    <color name="shouye_lv_tv">#909090</color>
+
+
+</resources>

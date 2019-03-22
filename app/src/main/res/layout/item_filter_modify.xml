@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/tag_filter_bg"
+        android:padding="5dp"
+        android:text="Helloworld"
+        android:textColor="@drawable/sel_text_black_white_checked" />
+
+    <TextView
+        android:id="@+id/tv_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="5dp"
+        android:background="@drawable/gv_biankuang_trans_common_color_point_line"
+        android:padding="5dp"
+        android:text="+ 添加标签"
+        android:textColor="@drawable/sel_text_black_white_checked"
+        android:visibility="gone" />
+</LinearLayout>

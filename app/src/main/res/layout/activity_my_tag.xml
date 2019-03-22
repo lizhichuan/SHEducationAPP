@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/activity_my_tag"
+    android:layout_height="match_parent"
+    tools:context="com.shaohua.sheducation.activity.FilterPlanActivity">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_backgroud"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="1dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        style="@style/my_tv_style"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="我的标签" />
+
+                    <TextView
+                        android:id="@+id/tv_my_nums"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="(3/9)"
+                        android:textColor="@color/common_hint"
+                        android:textSize="15sp" />
+                </LinearLayout>
+
+
+                <com.njcool.lzccommon.view.flowlayout.CoolTagFlowLayout
+                    android:id="@+id/fl_selected"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    app:max_select="5"></com.njcool.lzccommon.view.flowlayout.CoolTagFlowLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/my_tv_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="学习类型" />
+
+                <com.njcool.lzccommon.view.flowlayout.CoolTagFlowLayout
+                    android:id="@+id/fl_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    app:max_select="1"></com.njcool.lzccommon.view.flowlayout.CoolTagFlowLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/my_tv_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="其他" />
+
+                <com.njcool.lzccommon.view.flowlayout.CoolTagFlowLayout
+                    android:id="@+id/fl_other"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    app:max_select="1"></com.njcool.lzccommon.view.flowlayout.CoolTagFlowLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <TextView
+                    style="@style/my_tv_style"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="自定义" />
+
+                <com.njcool.lzccommon.view.flowlayout.CoolTagFlowLayout
+                    android:id="@+id/fl_modify"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    app:max_select="1"></com.njcool.lzccommon.view.flowlayout.CoolTagFlowLayout>
+            </LinearLayout>
+        </LinearLayout>
+
+    </android.support.v4.widget.NestedScrollView>
+
+</android.support.constraint.ConstraintLayout>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.shaohua.sheducation.activity.IntelligentLibraryActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/common_backgroud"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:orientation="horizontal"
+            android:padding="5dp">
+
+            <EditText
+                android:id="@+id/et_key"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginLeft="10dp"
+                android:layout_weight="1"
+                android:background="@drawable/gv_biankuang_search"
+                android:drawableLeft="@mipmap/icon_search"
+                android:drawablePadding="5dp"
+                android:gravity="center_vertical"
+                android:hint="搜索用户ID或昵称"
+                android:paddingBottom="5dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:paddingTop="5dp"
+                android:singleLine="true"
+                android:textColor="@color/common_black"
+                android:textSize="13sp" />
+
+            <TextView
+                android:id="@+id/tv_filter"
+                style="@style/my_tv_style"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:drawableLeft="@mipmap/icon_filter"
+                android:drawablePadding="3dp"
+                android:text="筛选"
+                android:textColor="@drawable/sel_text_black_common_color" />
+        </LinearLayout>
+
+        <com.njcool.lzccommon.view.fresh.CoolSwipeRefreshLayout
+            android:id="@+id/swp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rcv_courses"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+        </com.njcool.lzccommon.view.fresh.CoolSwipeRefreshLayout>
+    </LinearLayout>
+</android.support.constraint.ConstraintLayout>

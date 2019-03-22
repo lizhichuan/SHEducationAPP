@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:android_custom="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="5dp"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+            android:padding="10dp">
+
+            <TextView
+                android:id="@+id/tv_red_point"
+                android:layout_width="3dp"
+                android:layout_height="3dp"
+                android:background="@drawable/shape_round_textview" />
+
+
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:singleLine="true"
+                android:text="说实话我内心抗拒转发这一条[微笑]害怕小老婆集体爬墙"
+                android:textColor="@color/common_black"
+                android:textSize="15sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/tv_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="23dp"
+            android:paddingBottom="5dp"
+            android:text="2017-10-10"
+            android:textColor="@color/common_hint"
+            android:textSize="13sp" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/line"
+            android:layout_marginLeft="10dp"
+            android:background="@color/line_color" />
+
+        <TextView
+            android:id="@+id/tv_content"
+            style="@style/my_tv_style"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:ellipsize="end"
+            android:lines="2"
+            android:text="一场大戏即将开启。就在昨天，博通证实了他们要以1050亿美元的价格收购高通的计划，如果高通拒绝，博通很可能发起"
+            android:textColor="@color/common_hint"
+            android:textSize="13sp" />
+    </LinearLayout>
+</LinearLayout>
